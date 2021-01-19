@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Shapefile editor</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.15/esri/themes/light/main.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.34/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="Upload/Upload.css">
+    <script src="https://js.arcgis.com/4.17/"></script>
+    <script src="Upload/Upload.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+</head>
+
+<body>
+    <div id="mainWindow">
+        <div>
+            <div style="padding-left:4px">
+                <p> Add a Shapefile to the Map</p>
+                <form enctype="multipart/form-data" method="post" id="uploadForm">
+                    <div class="field">
+                        <label class="file-upload">
+                            <span><strong>Upload Your Shapefile here</strong></span>
+                            <input type="file" name="file" id="inFile" />
+                        </label>
+                    </div>
+                </form>
+                <span class="file-upload-status" style="opacity: 1" id="upload-status"></span>
+                <div id="fileInfo"></div>
+            </div>
+        </div>
+    </div>
+    <div id="layerDiv"></div>
+    <div id="viewDiv"></div>
+    <div id="topbar">
+       <h5>Mark Your Marine Object From Here</h5>
+        <button class="action-button esri-icon-trash" id="resetBtn" type="button"
+          title="Clear graphics"></button>
+          <button class="action-button" id="pointButton"
+          type="button" title="Draw point"><i class="fa fa-ship" style="font-size:20px;"></i></button>
+      </div>
+  
+    
+</body>
+
+</html>
